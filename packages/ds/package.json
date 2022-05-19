@@ -1,0 +1,14 @@
+{
+  "name": "@angrr/ds",
+  "version": "0.0.1",
+  "dependencies": {
+    "react": "18.1.0",
+    "react-native": "0.68.2"
+  },
+  "devDependencies": {
+    "jest": "28.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
