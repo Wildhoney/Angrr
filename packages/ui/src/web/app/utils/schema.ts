@@ -8,64 +8,63 @@ export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Mayb
 const defaultOptions = {} as const;
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
-  ID: string;
-  String: string;
-  Boolean: boolean;
-  Int: number;
-  Float: number;
+    ID: string;
+    String: string;
+    Boolean: boolean;
+    Int: number;
+    Float: number;
 };
 
 export type AddInput = {
-  description: Scalars['String'];
+    description: Scalars['String'];
 };
 
 export type DeleteInput = {
-  id: Scalars['Float'];
+    id: Scalars['Float'];
 };
 
 export type Mutation = {
-  __typename?: 'Mutation';
-  add?: Maybe<Todo>;
-  remove?: Maybe<Todo>;
+    __typename?: 'Mutation';
+    add?: Maybe<Todo>;
+    remove?: Maybe<Todo>;
 };
-
 
 export type MutationAddArgs = {
-  input: AddInput;
+    input: AddInput;
 };
 
-
 export type MutationRemoveArgs = {
-  input: DeleteInput;
+    input: DeleteInput;
 };
 
 export type Query = {
-  __typename?: 'Query';
-  list: Array<Todo>;
+    __typename?: 'Query';
+    list: Array<Todo>;
 };
 
 export type Todo = {
-  __typename?: 'Todo';
-  completed: Scalars['Boolean'];
-  description: Scalars['String'];
-  id: Scalars['Float'];
+    __typename?: 'Todo';
+    completed: Scalars['Boolean'];
+    description: Scalars['String'];
+    id: Scalars['Float'];
 };
 
-export type ListQueryVariables = Exact<{ [key: string]: never; }>;
+export type ListQueryVariables = Exact<{ [key: string]: never }>;
 
-
-export type ListQuery = { __typename?: 'Query', list: Array<{ __typename?: 'Todo', id: number, description: string, completed: boolean }> };
-
+export type ListQuery = {
+    __typename?: 'Query';
+    list: Array<{ __typename?: 'Todo'; id: number; description: string; completed: boolean }>;
+};
 
 export const ListDocument = gql`
     query List {
-  list {
-    id
-    description
-    completed
-  }
-}
-    `;
+        list {
+            id
+            description
+            completed
+        }
+    }
+`;
 
 /**
  * __useListQuery__
@@ -83,13 +82,13 @@ export const ListDocument = gql`
  * });
  */
 export function useListQuery(baseOptions?: Apollo.QueryHookOptions<ListQuery, ListQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<ListQuery, ListQueryVariables>(ListDocument, options);
-      }
+    const options = { ...defaultOptions, ...baseOptions };
+    return Apollo.useQuery<ListQuery, ListQueryVariables>(ListDocument, options);
+}
 export function useListLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<ListQuery, ListQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<ListQuery, ListQueryVariables>(ListDocument, options);
-        }
+    const options = { ...defaultOptions, ...baseOptions };
+    return Apollo.useLazyQuery<ListQuery, ListQueryVariables>(ListDocument, options);
+}
 export type ListQueryHookResult = ReturnType<typeof useListQuery>;
 export type ListLazyQueryHookResult = ReturnType<typeof useListLazyQuery>;
 export type ListQueryResult = Apollo.QueryResult<ListQuery, ListQueryVariables>;

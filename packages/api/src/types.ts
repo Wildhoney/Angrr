@@ -1,5 +1,5 @@
-import { DataSource } from "typeorm"
+import { DataSource } from 'typeorm';
 
 export type Context = {
-    db: DataSource
-}
+    db: DataSource;
+};
