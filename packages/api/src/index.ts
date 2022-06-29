@@ -1,10 +1,11 @@
-import 'reflect-metadata';
-import path from 'node:path';
-import { DataSource } from 'typeorm';
 import { ApolloServer } from 'apollo-server';
+import path from 'node:path';
+import 'reflect-metadata';
 import { buildSchema } from 'type-graphql';
-import TodoResolver from './resolvers/todo';
+import { DataSource } from 'typeorm';
+
 import Todo from './entities/todo';
+import TodoResolver from './resolvers/todo';
 
 const db = new DataSource({
     type: 'sqlite',

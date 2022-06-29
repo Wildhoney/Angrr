@@ -1,13 +1,11 @@
 {
     "name": "@angrr/components",
     "version": "0.0.1",
+    "module": "./src",
     "dependencies": {
         "@apollo/client": "3.6.4",
         "react": "18.1.0",
         "react-native": "0.68.2"
-    },
-    "devDependencies": {
-        "jest": "28.1.0"
     },
     "scripts": {
         "test": "jest",
