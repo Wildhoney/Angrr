@@ -3,7 +3,8 @@
     "version": "0.0.0",
     "license": "MIT",
     "scripts": {
-        "format": "nx run-many --target=format --all",
+        "format": "prettier . --write && nx run-many --target=format --all",
+        "graph": "nx graph",
         "start": "nx run-many --target=dev --all",
         "api": "nx run @angrr/api:dev",
         "web": "nx run @angrr/web:dev",
