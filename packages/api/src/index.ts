@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import path from 'node:path';
 import { DataSource } from 'typeorm';
 import { ApolloServer } from 'apollo-server';
 import { buildSchema } from 'type-graphql';
@@ -18,7 +19,7 @@ async function main(): Promise<void> {
 
     const schema = await buildSchema({
         emitSchemaFile: {
-            path: `${__dirname}/schema.graphql`,
+            path: path.join(__dirname, 'schema.graphql'),
             commentDescriptions: true,
             sortedSchema: true,
         },

@@ -5,6 +5,7 @@
         "moduleResolution": "node",
         "lib": ["esnext", "esnext.asynciterable"],
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "esModuleInterop": true
     }
 }
