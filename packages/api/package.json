@@ -11,7 +11,7 @@
         "typeorm": "0.3.6"
     },
     "scripts": {
-        "start": "nodemon -e ts-node src/index.ts",
+        "dev": "nodemon -e ts-node src/index.ts",
         "format": "prettier . --write"
     },
     "devDependencies": {
