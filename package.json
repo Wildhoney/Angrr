@@ -12,9 +12,13 @@
         "android": "nx run @angrr/native:android"
     },
     "private": true,
+    "dependencies": {
+        "react-native": "0.69.1"
+    },
     "devDependencies": {
         "@nrwl/cli": "14.3.6",
         "@nrwl/workspace": "14.3.6",
+        "@types/react-native": "0.69.1",
         "eslint": "^8.11.0",
         "eslint-plugin-prettier": "^4.0.0",
         "nx": "14.3.6",

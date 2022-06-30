@@ -13,6 +13,7 @@
     },
     "dependencies": {
         "@angrr/components": "*",
+        "@angrr/types": "*",
         "@apollo/client": "3.6.9",
         "@remix-run/node": "^1.3.5",
         "@remix-run/react": "^1.3.5",

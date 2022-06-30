@@ -4,8 +4,8 @@ import type { ReactElement } from 'react';
 import Home from '@angrr/components/pages/Home';
 
 import apollo from '../utils/graphql';
-import { ListDocument } from '../utils/schema';
-import type { ListQuery } from '../utils/schema';
+import { ListDocument } from '@angrr/types/schema';
+import type { ListQuery } from '@angrr/types/schema';
 
 export function loader() {
     return apollo.query({ query: ListDocument });
@@ -14,5 +14,5 @@ export function loader() {
 export default function Index(): ReactElement {
     const query = useLoaderData<ApolloQueryResult<ListQuery>>();
 
-    return <Home query={query} />;
+    return <Home data={query.data} />;
 }

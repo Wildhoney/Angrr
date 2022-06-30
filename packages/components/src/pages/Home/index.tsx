@@ -1,15 +1,21 @@
-import React, { ReactElement } from 'react';
+import Header from '@angrr/components/atoms/Header';
+import { ReactElement } from 'react';
+import Paragraph from '@angrr/components/atoms/Paragraph';
 
 import { Props } from './types';
 
-export default function Home({ query }: Props): ReactElement {
+export default function Home({ data }: Props): ReactElement {
     return (
         <section>
-            <h1>Todos ({query.data.list.length})</h1>
+            <Header>{`Todos (${data.list.length})`}</Header>
 
-            {query.data.list.map((todo) => (
-                <li key={todo.id}>{todo.description}</li>
-            ))}
+            <ul>
+                {data.list.map((todo) => (
+                    <li key={todo.id}>
+                        <Paragraph>{todo.description}</Paragraph>
+                    </li>
+                ))}
+            </ul>
         </section>
     );
 }

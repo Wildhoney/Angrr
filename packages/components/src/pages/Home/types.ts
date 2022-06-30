@@ -1,5 +1,5 @@
-import { ApolloQueryResult } from '@apollo/client';
+import { ListQuery } from '@angrr/types/schema';
 
 export type Props = {
-    query: ApolloQueryResult<any>;
+    data: ListQuery;
 };
