@@ -1,4 +1,5 @@
-import { Resolver, Query, Ctx, Mutation, Arg } from 'type-graphql';
+import { Arg, Ctx, Mutation, Query, Resolver } from 'type-graphql';
+
 import TodoObject from '../../entities/todo';
 import { Context } from '../../types';
 import { AddInput, DeleteInput } from './utils';

@@ -1,6 +1,6 @@
 import Header from '@angrr/components/atoms/Header';
-import { ReactElement } from 'react';
 import Paragraph from '@angrr/components/atoms/Paragraph';
+import { ReactElement } from 'react';
 
 import { Props } from './types';
 
