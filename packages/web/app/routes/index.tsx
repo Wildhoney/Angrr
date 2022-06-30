@@ -12,7 +12,7 @@ export function loader() {
 }
 
 export default function Index(): ReactElement {
-    const query = useLoaderData<ApolloQueryResult<ListQuery>>();
+    const { data } = useLoaderData<ApolloQueryResult<ListQuery>>();
 
-    return <Home data={query.data} />;
+    return <Home data={data} />;
 }
