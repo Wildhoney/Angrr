@@ -1,4 +1,4 @@
-import { Field, InputType, ObjectType } from 'type-graphql';
+import { Field, InputType } from 'type-graphql';
 import { MaxLength } from 'class-validator';
 
 @InputType()

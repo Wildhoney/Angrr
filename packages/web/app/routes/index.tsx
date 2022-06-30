@@ -1,7 +1,7 @@
 import type { ApolloQueryResult } from '@apollo/client';
 import { useLoaderData } from '@remix-run/react';
 import type { ReactElement } from 'react';
-import Home from '@angrr/components/src/pages/Home';
+import Home from '@angrr/components/pages/Home';
 
 import apollo from '../utils/graphql';
 import { ListDocument } from '../utils/schema';
